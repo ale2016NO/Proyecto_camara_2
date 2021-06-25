@@ -1575,7 +1575,7 @@ input[type="radio"] .styled:checked+label::after {
 .location_icon_bottum {
 bottom: 0;
 position: absolute;
-margin-bottom: 0px;
+margin-bottom: -40px;
 z-index: 999;
 background: #ff0000;
 width: 100%;
