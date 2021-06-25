@@ -1,18 +1,19 @@
 <?php
+$destino = "consultas@aldatec.com.ar";
 $nombre = $_POST['nombre'];
 $email = $_POST['email'];
 $telefono = $_POST['telefono'];
 $mensaje = $_POST['mensaje'];
 
-$texto_concatenado = 'Nombre: '.$nombre.'Email: '.$email.' Telefono: '.$telefono.' Mensaje: '.$mensaje;
+$texto_concatenado = "Nombre: ".$nombre ."\nEmail: ".$email."\nTelefono: ".$telefono."\nMensaje: ".$mensaje;
 
-echo $nombre
 
-if (mail('consultas@aldatec.com.ar', 'Consulta Web' , $texto_concatenado))
-{ echo "Mensaje enviado exitosamente";}
+if (mail($destino, "Consulta Web" , $texto_concatenado))
+{ echo "Mensaje enviado exitosamenten nos pondremos en contacto a la brevedad";}
 else
 {
   echo "Error al tratar de enviar el mensaje al servidor";
 }
 
+header("Refresh:3; url=https://aldatec.com.ar/");
 ?>
